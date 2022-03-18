@@ -1,39 +1,109 @@
 <style>
     /* Add a black background color to the top navigation */
     .topnav {
-        height: 78px;
         background-color: #292929;
         overflow: hidden;
     }
 
     /* Style the links inside the navigation bar */
-    .topnav a {
+    .navigation a {
         float: left;
         color: #FFFFFF;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 1rem;
     }
 
     /* Change the color of links on hover */
-    .topnav a:hover {
-        background-color: #ddd;
-        color: black;
+    .navigation a:hover {
+        color: #00AEFF;
     }
 
     /* Add a color to the active/current link */
-    .topnav a.active {
-        background-color: #00AEFF;
-        color: white;
+    .navigation a.active {
+        font-weight: 700;
+        color: #00AEFF;
+    }
+
+    .nav-top {
+        margin-left: 50px;
+    }
+
+    .nav-top a {
+        font-size: 0.85rem;
+    }
+
+    #menuToggle {
+        padding: 14px 36px;
+        align-self: flex-end;
+    }
+
+    #menuToggle a {
+        text-decoration: none;
+        color: #232323;
+        transition: color 0.3s ease;
+    }
+
+    /*
+     * Just a quick hamburger
+     */
+    #menuToggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #cdcdcd;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+    }
+
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    #nav {
+        margin-left: 48px;
     }
 </style>
-<div class="flex topnav">
-    <img src="assets/logo.jpg" alt="Zinnov" >
 
-    <a class="active" href="#">INDUSTRIES</a>
-    <a href="#">OFFERINGS</a>
-    <a href="#">INSIGHTS</a>
-    <a href="#">ABOUT US</a>
-    <a href="#">CAREERS</a>
+<div id="navbar-container">
+    <div class="flex topnav">
+        <div id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="flex-column topnav">
+            <nav role="navigation" id="nav-top" class="flex navigation">
+                <a href="#">NEWSROOM / MEDIA</a>
+                <a href="#">CONTACT US</a>
+            </nav>
+
+            <div class="flex align-center navigation">
+                <img height="29" src="assets/logo.png" alt="Zinnov">
+                <nav role="navigation" id="nav" class="flex">
+                    <a class="active" href="#">INDUSTRIES</a>
+                    <a href="#">OFFERINGS</a>
+                    <a href="#">INSIGHTS</a>
+                    <a href="#">ABOUT US</a>
+                    <a href="#">CAREERS</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <nav role="navigation" id="sub-nav" class="sub-nav">
+
+    </nav>
 </div>
