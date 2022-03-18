@@ -1,9 +1,103 @@
 <style>
+
+    nav {
+        display: block;
+    }
+
+    #mainnav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #mainnav > ul > li {
+        display: inline-block;
+        padding: 0 6px;
+    }
+
+    #mainnav ul li {
+        position: relative;
+    }
+
+    .header #mainnav > ul > li > a {
+        line-height: 100px;
+    }
+
+    #mainnav > ul > li.active > a {
+        color: #00AEFF;
+    }
+
+    #mainnav > ul > li > a {
+        position: relative;
+        display: block;
+        text-transform: uppercase;
+        color: #FFF;
+        text-decoration: none;
+        font-size: 1rem;
+        margin: 0 15px;
+        font-weight: 500;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #mainnav ul.submenu {
+        position: absolute;
+        left: 0;
+        top: 150%;
+        width: 300px;
+        text-align: left;
+        background-color: #292929;
+        z-index: 9999;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #mainnav ul.submenu li:first-child {
+        border-top: none;
+    }
+
+    #mainnav ul li ul li {
+        margin-left: 0;
+    }
+
+    #mainnav ul.submenu > li > a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 0 0 0 20px;
+        line-height: 45px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #mainnav ul li:hover > ul.submenu {
+        top: 100%;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+        filter: alpha(opacity=100);
+        opacity: 1;
+        visibility: visible;
+    }
+
+
     /* Add a black background color to the top navigation */
     .topnav {
-        background-color: #292929;
-        overflow: hidden;
+        background-color: #2929294d;
+        padding-bottom: 8px;
     }
+
 
     /* Style the links inside the navigation bar */
     .navigation a {
@@ -20,17 +114,7 @@
         color: #00AEFF;
     }
 
-    /* Add a color to the active/current link */
-    .navigation a.active {
-        font-weight: 700;
-        color: #00AEFF;
-    }
-
-    .nav-top {
-        margin-left: 50px;
-    }
-
-    .nav-top a {
+    #nav-top a {
         font-size: 0.85rem;
     }
 
@@ -45,9 +129,6 @@
         transition: color 0.3s ease;
     }
 
-    /*
-     * Just a quick hamburger
-     */
     #menuToggle span {
         display: block;
         width: 28px;
@@ -70,10 +151,6 @@
     #menuToggle span:nth-last-child(2) {
         transform-origin: 0% 100%;
     }
-
-    #nav {
-        margin-left: 48px;
-    }
 </style>
 
 <div id="navbar-container">
@@ -84,7 +161,7 @@
             <span></span>
         </div>
 
-        <div class="flex-column topnav">
+        <div class="flex-column">
             <nav role="navigation" id="nav-top" class="flex navigation">
                 <a href="#">NEWSROOM / MEDIA</a>
                 <a href="#">CONTACT US</a>
@@ -92,18 +169,45 @@
 
             <div class="flex align-center navigation">
                 <img height="29" src="assets/logo.png" alt="Zinnov">
-                <nav role="navigation" id="nav" class="flex">
-                    <a class="active" href="#">INDUSTRIES</a>
-                    <a href="#">OFFERINGS</a>
-                    <a href="#">INSIGHTS</a>
-                    <a href="#">ABOUT US</a>
-                    <a href="#">CAREERS</a>
+                <nav id="mainnav" class="mainnav">
+                    <ul class="menu">
+                        <li class="active">
+                            <a href="#">INDUSTRIES</a>
+                            <ul class="submenu">
+                                <li><a href="index.html">Home 01</a></li>
+                                <li><a href="index-v2.html">Home 02</a></li>
+                                <li><a href="index-v3.html">Home 03</a></li>
+                                <li><a href="index-v4.html">Home 04</a></li>
+                                <li><a href="index-v5.html">Home 05</a></li>
+                                <li><a href="index-v6.html">Home 06</a></li>
+                                <li><a href="index-v7.html">Home 07</a></li>
+                            </ul><!-- /.submenu -->
+                        </li>
+                        <li><a href="#">OFFERINGS</a></li>
+                        <li><a href="#">INSIGHTS</a>
+                            <ul class="submenu">
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="services-single.html">Services Single</a></li>
+                            </ul><!-- /.submenu -->
+                        </li>
+                        <li><a href="#">ABOUT US</a>
+                            <ul class="submenu">
+                                <li><a href="case-v1.html">Case V1</a></li>
+                                <li><a href="case-v2.html">Case V2</a></li>
+                                <li><a href="case-single-v1.html">Case Single V1</a></li>
+                                <li><a href="case-single-v2.html">Case Single V2</a></li>
+                            </ul><!-- /.submenu -->
+                        </li>
+                        <li><a href="">CAREERS</a>
+                            <ul class="submenu">
+                                <li><a href="blog.html">Blog V1</a></li>
+                                <li><a href="blog-v2.html">Blog V2</a></li>
+                                <li><a href="blog-single.html">Blog single</a></li>
+                            </ul><!-- /.submenu -->
+                        </li>
+                    </ul><!-- /.menu -->
                 </nav>
             </div>
         </div>
     </div>
-
-    <nav role="navigation" id="sub-nav" class="sub-nav">
-
-    </nav>
 </div>
