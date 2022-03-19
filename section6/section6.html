@@ -1,5 +1,5 @@
 <div id="section6-container">
-  <div class="flex">
+  <div class="section6-content">
     <div class="section6-card1">
       <div class="section6-card-content">
         <p class="flex-column section6-title">SUSTAINABILITY</p>
@@ -54,7 +54,10 @@
     margin-top: 15px;
     margin-bottom: 15px;
     color: #FFFFFF;
+  }
 
+  .section6-content {
+    display: flex;
   }
 
   .section6-card1 {
@@ -94,6 +97,17 @@
   }
 
   @media only screen and (max-width: 600px) {
+    .section6-content {
+      display: block;
+    }
+    .section6-card1{
+      margin-left: 15px;
+      border-radius: 22px;
+    }
+    .section6-card2{
+      margin: 0 15px;
+      border-radius: 22px;
+    }
     .section6-card-content {
       padding-left: 10%;
     }

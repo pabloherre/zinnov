@@ -3,7 +3,7 @@
     <div class="section2-title">
       <h1>LATEST FROM ZINNOV</h1>
     </div>
-    <div class="flex justify-center" style="width:100%; margin-top: 43px">
+    <div class="section2-card-container justify-center">
       <div class="section2-card section2-card-1">
         <div class="section2-card-blue">
           <p class="section2-card-title">REPORT</p>
@@ -49,6 +49,12 @@
     margin-bottom: 12px;
   }
 
+  .section2-card-container {
+    display: flex;
+    width: 100%;
+    margin-top: 43px
+  }
+
   .section2-card {
     width: 20%;
     height: 380px;
@@ -85,11 +91,13 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   .section2-card-2 {
     background: url("./assets/section2/image2.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   .section2-card-3 {
     background: url("./assets/section2/image3.png");
     background-repeat: no-repeat;
@@ -97,8 +105,18 @@
   }
 
   @media only screen and (max-width: 600px) {
+    #section2-container {
+      padding: 10px
+    }
+
+    .section2-card-container {
+      display: block;
+      margin-top: 0;
+    }
     .section2-card {
       width: auto;
+      margin-bottom: 15px;
+      margin-right: 0;
     }
   }
 </style>

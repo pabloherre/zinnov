@@ -17,8 +17,8 @@
       </div>
     </div>
     <div class="section3-card section3-card-3">
-      <div style="width: 100%; height: 430px;" class="flex justify-right">
-        <div style="margin-right: 20%; margin-top: 5%;">
+      <div class="flex justify-right section3-card-container">
+        <div class="section3-card-element">
           <h1>THE ZINNOV PODCAST</h1>
           <p class="section3-card-subtitle2">Insights from Experts on Businnes & Management</p>
           <div class="section1-learn-more flex align-center">
@@ -46,6 +46,16 @@
     align-items: flex-end;
     overflow: hidden;
     color: #FFF;
+  }
+
+  .section3-card-container {
+    width: 100%;
+    height: 430px;
+  }
+
+  .section3-card-element {
+    margin-right: 20%;
+    margin-top: 5%;
   }
 
   .section3-card-1 {
@@ -90,6 +100,16 @@
     font-size: 1rem;
     line-height: 20px;
     letter-spacing: 0.04em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .section3-card-container {
+      height: auto;
+    }
+
+    .section3-card-element {
+      margin: 5% 20% 5% 10%;
+    }
   }
 
 </style>

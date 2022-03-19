@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 </head>
@@ -34,8 +35,18 @@
   .justify-right {
     justify-content: right;
   }
+
   .justify-between {
     justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1rem;
+    }
   }
 </style>
 <script>
@@ -104,16 +115,17 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 
 <body>
-<div w3-include-html="navbar/navbar.html"></div>
-<div w3-include-html="section1/section1.html"></div>
-<div w3-include-html="section2/section2.html"></div>
-<div w3-include-html="section3/section3.html"></div>
-<div w3-include-html="section4/section4.html"></div>
-<div w3-include-html="section5/section5.html"></div>
-<div w3-include-html="section6/section6.html"></div>
-<div w3-include-html="section7/section7.html"></div>
-<div w3-include-html="footer/footer.html"></div>
-
+<div style="overflow: hidden">
+  <div w3-include-html="navbar/navbar.html"></div>
+  <div w3-include-html="section1/section1.html"></div>
+  <div w3-include-html="section2/section2.html"></div>
+  <div w3-include-html="section3/section3.html"></div>
+  <div w3-include-html="section4/section4.html"></div>
+  <div w3-include-html="section5/section5.html"></div>
+  <div w3-include-html="section6/section6.html"></div>
+  <div w3-include-html="section7/section7.html"></div>
+  <div w3-include-html="footer/footer.html"></div>
+</div>
 <script>
     includeHTML();
     setTimeout(() => {

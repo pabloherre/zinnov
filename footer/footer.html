@@ -1,5 +1,5 @@
 <div id="footer">
-  <div class="flex justify-between">
+  <div class="footer-container justify-between">
     <div class="flex">
       <div class="footer-link flex-column">
         <a href="#">CONTACT US</a>
@@ -44,6 +44,10 @@
     color: #FFFFFF;
   }
 
+  .footer-container {
+    display: flex;
+  }
+
   .footer-link a {
     margin-right: 80px;
     margin-bottom: 15px;
@@ -53,5 +57,14 @@
     letter-spacing: 0.05em;
     color: #FFFFFF;
     text-decoration: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .footer-container {
+      display: block;
+    }
+    .footer-link a {
+      margin-right: 25px;
+    }
   }
 </style>
