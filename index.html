@@ -34,6 +34,9 @@
   .justify-right {
     justify-content: right;
   }
+  .justify-between {
+    justify-content: space-between;
+  }
 </style>
 <script>
     function includeHTML() {
@@ -101,11 +104,12 @@
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 
 <body>
-<div w3-include-html="navbar.html"></div>
+<div w3-include-html="navbar/navbar.html"></div>
 <div w3-include-html="section1/section1.html"></div>
 <div w3-include-html="section2/section2.html"></div>
 <div w3-include-html="section3/section3.html"></div>
 <div w3-include-html="section4/section4.html"></div>
+<div w3-include-html="footer/footer.html"></div>
 
 <script>
     includeHTML();

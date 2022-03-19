@@ -1,20 +1,21 @@
 <style>
   .nav {
-    background-color: #0000004d;
+    background-color: #000000a8;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding-bottom: 20px;
   }
 
   .sub-nav {
     display: none;
-    background-color: #0000004d;
+    background-color: #000000a8;
     overflow: hidden;
     padding: 34px 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
-    top: 109px;
+    top: 107px;
+    z-index: 1;
   }
 
   .sub-nav div:first-child {
@@ -144,7 +145,7 @@
       </nav>
 
       <div class="flex align-center navigation">
-        <img height="29" src="assets/logo.png" alt="Zinnov">
+        <img height="29" src="./assets/logo.png" alt="Zinnov">
         <nav role="navigation" id="nav" class="flex">
           <a href="#" onmouseenter="showMenu(this, 'sub-menu-industries')">INDUSTRIES</a>
           <a href="#" onmouseenter="showMenu(this, 'sub-menu-offerings')">OFFERINGS</a>
@@ -358,6 +359,4 @@
       </div>
     </div>
   </div>
-</div>
-
 </div>
