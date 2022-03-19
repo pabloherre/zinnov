@@ -1,363 +1,363 @@
 <style>
-    .nav {
-        background-color: #0000004d;
-        overflow: hidden;
-        position: absolute;
-        width: 100%;
-        padding-bottom: 20px;
+  .nav {
+    background-color: #0000004d;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .sub-nav {
+    display: none;
+    background-color: #0000004d;
+    overflow: hidden;
+    padding: 34px 0;
+    position: absolute;
+    width: 100%;
+    top: 109px;
+  }
+
+  .sub-nav div:first-child {
+    margin-left: 100px;
+  }
+
+  .navigation a {
+    float: left;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .navigation a:hover {
+    color: #00AEFF;
+  }
+
+  .navigation a.active {
+    font-weight: 700;
+    color: #00AEFF;
+  }
+
+  .navigation a.active-arrow {
+    font-weight: 700;
+    color: #00AEFF;
+  }
+
+  .navigation a.active-arrow:after {
+    content: '\276F';
+    position: absolute;
+    left: 13%;
+    width: 0;
+    height: 0;
+    clear: both;
+    line-height: 1;
+  }
+
+  #nav-top a {
+    font-size: 0.85rem;
+  }
+
+  #menuToggle {
+    padding: 6px 36px;
+    align-self: flex-end;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 28px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #FFF;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0 0;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0 100%;
+  }
+
+  #nav {
+    margin-left: 22px;
+  }
+
+  .vertical-rule {
+    border-left: 1px solid #FFF;
+    height: 100%;
+    margin: 0 40px;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    #nav {
+      display: none;
     }
 
-    .sub-nav {
-        display: none;
-        background-color: #0000004d;
-        overflow: hidden;
-        padding: 34px 0;
-        position: absolute;
-        width: 100%;
-        top: 109px;
-    }
-
-    .sub-nav div:first-child {
-        margin-left: 100px;
-    }
-
-    .navigation a {
-        float: left;
-        color: #FFFFFF;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 1rem;
-    }
-
-    .navigation a:hover {
-        color: #00AEFF;
-    }
-
-    .navigation a.active {
-        font-weight: 700;
-        color: #00AEFF;
-    }
-
-    .navigation a.active-arrow {
-        font-weight: 700;
-        color: #00AEFF;
-    }
-
-    .navigation a.active-arrow:after {
-        content: '\276F';
-        position: absolute;
-        left: 13%;
-        width: 0;
-        height: 0;
-        clear: both;
-        line-height: 1;
-    }
-
-    #nav-top a {
-        font-size: 0.85rem;
+    #nav-top {
+      display: none;
     }
 
     #menuToggle {
-        padding: 6px 36px;
-        align-self: flex-end;
+      padding: 0px 36px;
     }
 
-    #menuToggle span {
-        display: block;
-        width: 28px;
-        height: 4px;
-        margin-bottom: 5px;
-        position: relative;
-        background: #FFF;
-        border-radius: 3px;
-        z-index: 1;
+    .nav {
+      padding-top: 20px;
     }
 
-    #menuToggle span:first-child {
-        transform-origin: 0 0;
+    .sub-nav {
+      top: 63px;
     }
 
-    #menuToggle span:nth-last-child(2) {
-        transform-origin: 0 100%;
+    .sub-nav div:first-child {
+      margin-left: 40px
     }
 
-    #nav {
-        margin-left: 22px;
+    .navigation a.active-arrow:after {
+      left: 18%;
+      line-height: 1.3;
     }
-
-    .vertical-rule {
-        border-left: 1px solid #FFF;
-        height: 100%;
-        margin: 0 40px;
-    }
-
-    .hide {
-        display: none;
-    }
-
-    @media only screen and (max-width: 1024px) {
-        #nav {
-            display: none;
-        }
-
-        #nav-top {
-            display: none;
-        }
-
-        #menuToggle {
-            padding: 0px 36px;
-        }
-
-        .nav {
-            padding-top: 20px;
-        }
-
-        .sub-nav {
-            top: 63px;
-        }
-
-        .sub-nav div:first-child {
-            margin-left: 40px
-        }
-
-        .navigation a.active-arrow:after {
-            left: 18%;
-            line-height: 1.3;
-        }
-    }
+  }
 </style>
 
 
 <div id="navbar-container">
-    <div class="flex nav align-center">
-        <div id="menuToggle" onclick="showMenu(this, 'sub-menu-sandwich')">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <div class="flex-column">
-            <nav role="navigation" id="nav-top" class="flex navigation">
-                <a style="padding-left: 0;" href="#">NEWSROOM / MEDIA</a>
-                <a href="#">CONTACT US</a>
-            </nav>
-
-            <div class="flex align-center navigation">
-                <img height="29" src="assets/logo.png" alt="Zinnov">
-                <nav role="navigation" id="nav" class="flex">
-                    <a href="#" onmouseenter="showMenu(this, 'sub-menu-industries')">INDUSTRIES</a>
-                    <a href="#" onmouseenter="showMenu(this, 'sub-menu-offerings')">OFFERINGS</a>
-                    <a href="#" onmouseenter="showMenu(this, 'sub-menu-insights')">INSIGHTS</a>
-                    <a href="#" onmouseenter="showMenu(this, 'sub-menu-about-us')">ABOUT US</a>
-                    <a href="#" onmouseenter="showMenu(this, 'sub-menu-careers')">CAREERS</a>
-                </nav>
-            </div>
-        </div>
+  <div class="flex nav align-center">
+    <div id="menuToggle" onclick="showMenu(this, 'sub-menu-sandwich')">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
-    <!-- SUB-MENUS -->
-    <div onmouseleave="hideMenus()">
-        <div name="sub-menu" id="sub-menu-industries" class="sub-nav">
-            <div class="flex">
-                <nav role="navigation" class="flex-column navigation">
-                    <a href="#">Internet & Technology Platforms</a>
-                    <a href="#">Enterprise Software</a>
-                    <a href="#">ER&D and Digital Services</a>
-                    <a href="#">Automotive, Mobility & Aero</a>
-                    <a href="#">Retail</a>
-                    <a href="#">Industrial</a>
-                </nav>
-                <div>
-                    <div class="vertical-rule"></div>
-                </div>
-                <nav role="navigation" class="flex-column navigation">
-                    <a href="#">BFSI & Fintech</a>
-                    <a href="#">Healthcare</a>
-                    <a href="#">Private Equity</a>
-                    <a href="#">Semiconductors</a>
-                    <a href="#">Media and Telecommunications</a>
-                    <a href="#">Global SMBs</a>
-                </nav>
-            </div>
-        </div>
-        <div name="sub-menu" id="sub-menu-offerings" class="sub-nav">
-            <div class="flex">
-                <nav role="navigation" class="flex-column navigation">
-                    <a href="#">Global Talent</a>
-                    <a href="#">GAP Platform</a>
-                    <a href="#">Business Growth & Transformation</a>
-                    <a href="#">Mergers & Acquisitions</a>
-                    <a href="#">Private Equity</a>
-                    <a href="#">Innovation Strategy</a>
-                </nav>
-                <div>
-                    <div class="vertical-rule"></div>
-                </div>
-                <nav role="navigation" class="flex-column navigation">
-                    <a href="#">Technology & Market Insights</a>
-                    <a href="#">Automation</a>
-                </nav>
-            </div>
-        </div>
-        <div name="sub-menu" id="sub-menu-insights" class="sub-nav">
-            <div class="flex">
-                <nav role="navigation" class="flex-column navigation">
-                    <a href="#">Inclusion, Diversity & Equity</a>
-                    <a href="#">Hyper Intelligent Automation</a>
-                    <a href="#">Covid-19</a>
-                    <a href="#">Future of Work</a>
-                    <a href="#">CXO Briefings</a>
-                    <a href="#">Globalization</a>
-                </nav>
-                <div>
-                    <div class="vertical-rule"></div>
-                </div>
-                <nav role="navigation" class="flex-column navigation">
-                    <a href="#">Digital Engineering</a>
-                    <a href="#">Modern Technologies</a>
-                    <a href="#">Sustainability</a>
-                    <a href="#">Explore All Insights</a>
-                </nav>
-            </div>
-        </div>
-        <div name="sub-menu" id="sub-menu-about-us" class="sub-nav">
-            <div class="flex">
-                <nav role="navigation" class="flex-column navigation">
-                    <a href="#">Our Purpose</a>
-                    <a href="#">Our People & Culture</a>
-                    <a href="#">Our Leadership</a>
-                    <a href="#">Advisory Board</a>
-                    <a href="#">Awards & Recognitions</a>
-                    <a href="#">Partnerships and Alliances</a>
-                </nav>
-                <div>
-                    <div class="vertical-rule"></div>
-                </div>
-                <nav role="navigation" class="flex-column navigation">
-                    <a href="#">Alumni</a>
-                </nav>
-            </div>
-        </div>
-        <div name="sub-menu" id="sub-menu-careers" class="sub-nav">
-            <div class="flex">
-                <nav role="navigation" class="flex-column navigation">
-                    <a href="#">Why Zinnov</a>
-                    <a href="#">Explore Opportunities</a>
-                    <a href="#">Our People</a>
-                    <a href="#">Life @ Zinnov</a>
-                </nav>
-            </div>
-        </div>
-    </div>
+    <div class="flex-column">
+      <nav role="navigation" id="nav-top" class="flex navigation">
+        <a style="padding-left: 0;" href="#">NEWSROOM / MEDIA</a>
+        <a href="#">CONTACT US</a>
+      </nav>
 
-    <!-- SUB-MENU-SANDWICH   -->
-    <div onmouseleave="hideMenus()">
-        <div name="sub-menu" id="sub-menu-sandwich" class="sub-nav">
-            <div class="flex navigation">
-                <nav role="navigation" id="sub-nav" class="flex-column">
-                    <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-industries')">INDUSTRIES</a>
-                    <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-offerings')">OFFERINGS</a>
-                    <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-insights')">INSIGHTS</a>
-                    <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-about-us')">ABOUT US</a>
-                    <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-careers')">CAREERS</a>
-                </nav>
-                <div>
-                    <div name="sub-menu-sand" id="sand-sub-menu-industries" class="hide">
-                        <div class="flex">
-                            <nav role="navigation" class="flex-column navigation">
-                                <a href="#">Internet & Technology Platforms</a>
-                                <a href="#">Enterprise Software</a>
-                                <a href="#">ER&D and Digital Services</a>
-                                <a href="#">Automotive, Mobility & Aero</a>
-                                <a href="#">Retail</a>
-                                <a href="#">Industrial</a>
-                            </nav>
-                            <div>
-                                <div class="vertical-rule"></div>
-                            </div>
-                            <nav role="navigation" class="flex-column navigation">
-                                <a href="#">BFSI & Fintech</a>
-                                <a href="#">Healthcare</a>
-                                <a href="#">Private Equity</a>
-                                <a href="#">Semiconductors</a>
-                                <a href="#">Media and Telecommunications</a>
-                                <a href="#">Global SMBs</a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div name="sub-menu-sand" id="sand-sub-menu-offerings" class="hide">
-                        <div class="flex">
-                            <nav role="navigation" class="flex-column navigation">
-                                <a href="#">Global Talent</a>
-                                <a href="#">GAP Platform</a>
-                                <a href="#">Business Growth & Transformation</a>
-                                <a href="#">Mergers & Acquisitions</a>
-                                <a href="#">Private Equity</a>
-                                <a href="#">Innovation Strategy</a>
-                            </nav>
-                            <div>
-                                <div class="vertical-rule"></div>
-                            </div>
-                            <nav role="navigation" class="flex-column navigation">
-                                <a href="#">Technology & Market Insights</a>
-                                <a href="#">Automation</a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div name="sub-menu-sand" id="sand-sub-menu-insights" class="hide">
-                        <div class="flex">
-                            <nav role="navigation" class="flex-column navigation">
-                                <a href="#">Inclusion, Diversity & Equity</a>
-                                <a href="#">Hyper Intelligent Automation</a>
-                                <a href="#">Covid-19</a>
-                                <a href="#">Future of Work</a>
-                                <a href="#">CXO Briefings</a>
-                                <a href="#">Globalization</a>
-                            </nav>
-                            <div>
-                                <div class="vertical-rule"></div>
-                            </div>
-                            <nav role="navigation" class="flex-column navigation">
-                                <a href="#">Digital Engineering</a>
-                                <a href="#">Modern Technologies</a>
-                                <a href="#">Sustainability</a>
-                                <a href="#">Explore All Insights</a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div name="sub-menu-sand" id="sand-sub-menu-about-us" class="hide">
-                        <div class="flex">
-                            <nav role="navigation" class="flex-column navigation">
-                                <a href="#">Our Purpose</a>
-                                <a href="#">Our People & Culture</a>
-                                <a href="#">Our Leadership</a>
-                                <a href="#">Advisory Board</a>
-                                <a href="#">Awards & Recognitions</a>
-                                <a href="#">Partnerships and Alliances</a>
-                            </nav>
-                            <div>
-                                <div class="vertical-rule"></div>
-                            </div>
-                            <nav role="navigation" class="flex-column navigation">
-                                <a href="#">Alumni</a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div name="sub-menu-sand" id="sand-sub-menu-careers" class="hide">
-                        <div class="flex">
-                            <nav role="navigation" class="flex-column navigation">
-                                <a href="#">Why Zinnov</a>
-                                <a href="#">Explore Opportunities</a>
-                                <a href="#">Our People</a>
-                                <a href="#">Life @ Zinnov</a>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div class="flex align-center navigation">
+        <img height="29" src="assets/logo.png" alt="Zinnov">
+        <nav role="navigation" id="nav" class="flex">
+          <a href="#" onmouseenter="showMenu(this, 'sub-menu-industries')">INDUSTRIES</a>
+          <a href="#" onmouseenter="showMenu(this, 'sub-menu-offerings')">OFFERINGS</a>
+          <a href="#" onmouseenter="showMenu(this, 'sub-menu-insights')">INSIGHTS</a>
+          <a href="#" onmouseenter="showMenu(this, 'sub-menu-about-us')">ABOUT US</a>
+          <a href="#" onmouseenter="showMenu(this, 'sub-menu-careers')">CAREERS</a>
+        </nav>
+      </div>
     </div>
+  </div>
+
+  <!-- SUB-MENUS -->
+  <div onmouseleave="hideMenus()">
+    <div name="sub-menu" id="sub-menu-industries" class="sub-nav">
+      <div class="flex">
+        <nav role="navigation" class="flex-column navigation">
+          <a href="#">Internet & Technology Platforms</a>
+          <a href="#">Enterprise Software</a>
+          <a href="#">ER&D and Digital Services</a>
+          <a href="#">Automotive, Mobility & Aero</a>
+          <a href="#">Retail</a>
+          <a href="#">Industrial</a>
+        </nav>
+        <div>
+          <div class="vertical-rule"></div>
+        </div>
+        <nav role="navigation" class="flex-column navigation">
+          <a href="#">BFSI & Fintech</a>
+          <a href="#">Healthcare</a>
+          <a href="#">Private Equity</a>
+          <a href="#">Semiconductors</a>
+          <a href="#">Media and Telecommunications</a>
+          <a href="#">Global SMBs</a>
+        </nav>
+      </div>
+    </div>
+    <div name="sub-menu" id="sub-menu-offerings" class="sub-nav">
+      <div class="flex">
+        <nav role="navigation" class="flex-column navigation">
+          <a href="#">Global Talent</a>
+          <a href="#">GAP Platform</a>
+          <a href="#">Business Growth & Transformation</a>
+          <a href="#">Mergers & Acquisitions</a>
+          <a href="#">Private Equity</a>
+          <a href="#">Innovation Strategy</a>
+        </nav>
+        <div>
+          <div class="vertical-rule"></div>
+        </div>
+        <nav role="navigation" class="flex-column navigation">
+          <a href="#">Technology & Market Insights</a>
+          <a href="#">Automation</a>
+        </nav>
+      </div>
+    </div>
+    <div name="sub-menu" id="sub-menu-insights" class="sub-nav">
+      <div class="flex">
+        <nav role="navigation" class="flex-column navigation">
+          <a href="#">Inclusion, Diversity & Equity</a>
+          <a href="#">Hyper Intelligent Automation</a>
+          <a href="#">Covid-19</a>
+          <a href="#">Future of Work</a>
+          <a href="#">CXO Briefings</a>
+          <a href="#">Globalization</a>
+        </nav>
+        <div>
+          <div class="vertical-rule"></div>
+        </div>
+        <nav role="navigation" class="flex-column navigation">
+          <a href="#">Digital Engineering</a>
+          <a href="#">Modern Technologies</a>
+          <a href="#">Sustainability</a>
+          <a href="#">Explore All Insights</a>
+        </nav>
+      </div>
+    </div>
+    <div name="sub-menu" id="sub-menu-about-us" class="sub-nav">
+      <div class="flex">
+        <nav role="navigation" class="flex-column navigation">
+          <a href="#">Our Purpose</a>
+          <a href="#">Our People & Culture</a>
+          <a href="#">Our Leadership</a>
+          <a href="#">Advisory Board</a>
+          <a href="#">Awards & Recognitions</a>
+          <a href="#">Partnerships and Alliances</a>
+        </nav>
+        <div>
+          <div class="vertical-rule"></div>
+        </div>
+        <nav role="navigation" class="flex-column navigation">
+          <a href="#">Alumni</a>
+        </nav>
+      </div>
+    </div>
+    <div name="sub-menu" id="sub-menu-careers" class="sub-nav">
+      <div class="flex">
+        <nav role="navigation" class="flex-column navigation">
+          <a href="#">Why Zinnov</a>
+          <a href="#">Explore Opportunities</a>
+          <a href="#">Our People</a>
+          <a href="#">Life @ Zinnov</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUB-MENU-SANDWICH   -->
+  <div onmouseleave="hideMenus()">
+    <div name="sub-menu" id="sub-menu-sandwich" class="sub-nav">
+      <div class="flex navigation">
+        <nav role="navigation" id="sub-nav" class="flex-column">
+          <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-industries')">INDUSTRIES</a>
+          <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-offerings')">OFFERINGS</a>
+          <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-insights')">INSIGHTS</a>
+          <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-about-us')">ABOUT US</a>
+          <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-careers')">CAREERS</a>
+        </nav>
+        <div>
+          <div name="sub-menu-sand" id="sand-sub-menu-industries" class="hide">
+            <div class="flex">
+              <nav role="navigation" class="flex-column navigation">
+                <a href="#">Internet & Technology Platforms</a>
+                <a href="#">Enterprise Software</a>
+                <a href="#">ER&D and Digital Services</a>
+                <a href="#">Automotive, Mobility & Aero</a>
+                <a href="#">Retail</a>
+                <a href="#">Industrial</a>
+              </nav>
+              <div>
+                <div class="vertical-rule"></div>
+              </div>
+              <nav role="navigation" class="flex-column navigation">
+                <a href="#">BFSI & Fintech</a>
+                <a href="#">Healthcare</a>
+                <a href="#">Private Equity</a>
+                <a href="#">Semiconductors</a>
+                <a href="#">Media and Telecommunications</a>
+                <a href="#">Global SMBs</a>
+              </nav>
+            </div>
+          </div>
+          <div name="sub-menu-sand" id="sand-sub-menu-offerings" class="hide">
+            <div class="flex">
+              <nav role="navigation" class="flex-column navigation">
+                <a href="#">Global Talent</a>
+                <a href="#">GAP Platform</a>
+                <a href="#">Business Growth & Transformation</a>
+                <a href="#">Mergers & Acquisitions</a>
+                <a href="#">Private Equity</a>
+                <a href="#">Innovation Strategy</a>
+              </nav>
+              <div>
+                <div class="vertical-rule"></div>
+              </div>
+              <nav role="navigation" class="flex-column navigation">
+                <a href="#">Technology & Market Insights</a>
+                <a href="#">Automation</a>
+              </nav>
+            </div>
+          </div>
+          <div name="sub-menu-sand" id="sand-sub-menu-insights" class="hide">
+            <div class="flex">
+              <nav role="navigation" class="flex-column navigation">
+                <a href="#">Inclusion, Diversity & Equity</a>
+                <a href="#">Hyper Intelligent Automation</a>
+                <a href="#">Covid-19</a>
+                <a href="#">Future of Work</a>
+                <a href="#">CXO Briefings</a>
+                <a href="#">Globalization</a>
+              </nav>
+              <div>
+                <div class="vertical-rule"></div>
+              </div>
+              <nav role="navigation" class="flex-column navigation">
+                <a href="#">Digital Engineering</a>
+                <a href="#">Modern Technologies</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Explore All Insights</a>
+              </nav>
+            </div>
+          </div>
+          <div name="sub-menu-sand" id="sand-sub-menu-about-us" class="hide">
+            <div class="flex">
+              <nav role="navigation" class="flex-column navigation">
+                <a href="#">Our Purpose</a>
+                <a href="#">Our People & Culture</a>
+                <a href="#">Our Leadership</a>
+                <a href="#">Advisory Board</a>
+                <a href="#">Awards & Recognitions</a>
+                <a href="#">Partnerships and Alliances</a>
+              </nav>
+              <div>
+                <div class="vertical-rule"></div>
+              </div>
+              <nav role="navigation" class="flex-column navigation">
+                <a href="#">Alumni</a>
+              </nav>
+            </div>
+          </div>
+          <div name="sub-menu-sand" id="sand-sub-menu-careers" class="hide">
+            <div class="flex">
+              <nav role="navigation" class="flex-column navigation">
+                <a href="#">Why Zinnov</a>
+                <a href="#">Explore Opportunities</a>
+                <a href="#">Our People</a>
+                <a href="#">Life @ Zinnov</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 </div>
