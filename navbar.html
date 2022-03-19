@@ -11,10 +11,13 @@
         display: none;
         background-color: #0000004d;
         overflow: hidden;
-        padding: 34px 100px;
+        padding: 34px 0;
         position: absolute;
         width: 100%;
-        top: 108px;
+        top: 109px;
+    }
+    .sub-nav div:first-child{
+        margin-left: 100px;
     }
 
     .navigation a {
@@ -45,9 +48,28 @@
         width: 0;
         height: 0;
         clear: both;
+        line-height: 1;
     }
 
-    .nav-top a {
+    @media only screen and (max-width: 1024px) {
+        #nav {
+            display: none;
+        }
+        #nav-top {
+            display: none;
+        }
+        .nav {
+            padding-top: 20px;
+        }
+        .sub-nav {
+            top: 63px;
+        }
+        .sub-nav div:first-child {
+            margin-left: 40px
+        }
+    }
+
+    #nav-top a {
         font-size: 0.85rem;
     }
 
@@ -59,7 +81,7 @@
     #menuToggle span {
         display: block;
         width: 28px;
-        height: 3px;
+        height: 4px;
         margin-bottom: 5px;
         position: relative;
         background: #FFF;
@@ -224,7 +246,7 @@
                     <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-about-us')">ABOUT US</a>
                     <a href="#" onmouseenter="showSubMenu(this, 'sand-sub-menu-careers')">CAREERS</a>
                 </nav>
-                <div style="margin-left: 150px">
+                <div>
                     <div name="sub-menu-sand" id="sand-sub-menu-industries" class="hide">
                         <div class="flex">
                             <nav role="navigation" class="flex-column navigation">
