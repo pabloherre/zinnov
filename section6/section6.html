@@ -1,11 +1,11 @@
 <div id="section6-container">
   <div class="flex">
     <div class="section6-card1">
-      <div style="padding-left: 20%">
+      <div class="section6-card-content">
         <p class="flex-column section6-title">SUSTAINABILITY</p>
         <p>Towards a circular economy</p>
       </div>
-      <div style="padding-left: 20%">
+      <div class="section6-card-content">
         <div class="flex align-center">
           <p class="section6-subtitle">2021 SUSTAINABILITY REPORT</p>
           &nbsp;&nbsp;&nbsp;
@@ -42,8 +42,8 @@
     </div>
     <div class="section6-card2">
       <div style="padding-left: 5%">
-      <p class="section6-title">OUR <br />
-        PROMISE</p>
+        <p class="section6-title">OUR <br/>
+          PROMISE</p>
       </div>
     </div>
   </div>
@@ -69,6 +69,10 @@
     justify-content: space-evenly;
   }
 
+  .section6-card-content {
+    padding-left: 20%
+  }
+
   .section6-card2 {
     flex: 3;
     height: 400px;
@@ -87,5 +91,11 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .section6-card-content {
+      padding-left: 10%;
+    }
   }
 </style>

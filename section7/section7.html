@@ -2,13 +2,13 @@
   <div class="flex justify-right section7-content">
     <div>
       <p class="section7-title">LIFE AT ZINNOV</p>
-      <p class="section7-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      <p class="section7-subtitle2 section7-with">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor
         incididunt
         ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-
       <div>
         <div class="flex align-center">
-          <p class="section6-subtitle">EXPLORE OPEN ROLES</p>
+          <p class="section7-subtitle">EXPLORE OPEN ROLES</p>
           &nbsp;&nbsp;&nbsp;
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -18,7 +18,7 @@
           </svg>
         </div>
         <div class="flex align-center">
-          <p class="section6-subtitle">OUR CULTURE</p>
+          <p class="section7-subtitle">OUR CULTURE</p>
           &nbsp;&nbsp;&nbsp;
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -52,11 +52,14 @@
     line-height: 38px;
   }
 
+  .section7-with {
+    width: 60%;
+  }
+
   .section7-subtitle {
     font-weight: 500;
     font-size: 1rem;
     line-height: 20px;
-    width: 60%;
   }
 
   .section7-subtitle2 {
@@ -64,5 +67,11 @@
     font-size: 1.2rem;
     line-height: 20px;
     letter-spacing: 0.05em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #section7-container {
+      background-size: cover;
+    }
   }
 </style>
