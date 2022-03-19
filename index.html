@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
 </head>
 <style>
   html {
@@ -97,16 +98,28 @@
     }
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
 
 <body>
 <div w3-include-html="navbar.html"></div>
 <div w3-include-html="section1/section1.html"></div>
 <div w3-include-html="section2/section2.html"></div>
 <div w3-include-html="section3/section3.html"></div>
+<div w3-include-html="section4/section4.html"></div>
 
 <script>
     includeHTML();
+    setTimeout(() => {
+        //https://splidejs.com/guides/options/
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 3,
+            autoHeight: true,
+            gap: 15,
+            perMove: 1
+        });
+        splide.mount();
+    }, 100)
 </script>
-
 </body>
 </html>
