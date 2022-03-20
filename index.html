@@ -121,18 +121,34 @@
         document.getElementById(menu).style.transform = "scaleY(1)";
     }
 
-    function hideSubMenus() {
+    function hideSubMenus(menu) {
         const links = document.getElementById("sub-nav").children;
         for (var i = 0; i < links.length; i++) {
             links[i].className = ''
         }
-        document.getElementsByName("sub-menu-sand").forEach(el => el.style.display = 'none');
+        document.getElementsByName("sub-menu-sand").forEach(el => {
+          el.style.transform = "scaleY(0)";
+          el.style.height = 'auto';
+        });
     }
 
     function showSubMenu(el, menu) {
-        hideSubMenus();
         el.className = "active-arrow";
-        document.getElementById(menu).style.display = 'block';
+        document.getElementsByName(menu).forEach(el => {
+          el.style.transform = "scaleY(1)";
+          el.style.height = 'auto';
+        });
+    }
+    
+    function hideSubMenu(el, menu) {
+      setTimeout(() => {
+        el.className = "";
+        document.getElementsByName(menu).forEach(el => {
+          el.style.transform = "scaleY(0)";
+          el.style.height = 0;
+        });
+      }, 100)
+
     }
 
 </script>
@@ -162,6 +178,7 @@
             perMove: 1,
             cloneStatus: true,
             slideFocus: true,
+            pagination: false,
             easing: 'ease',
             speed: 800,
             classes: {
@@ -169,6 +186,14 @@
               arrow : 'splide__arrow',
               prev  : 'splide__arrow--prev',
               next  : 'splide__arrow--next'
+            },
+            breakpoints: {
+              600: {
+                perPage: 1,
+                gap: 5,
+                padding: '10%',
+                start: 1
+              }
             }
         });
         splide.mount();
