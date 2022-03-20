@@ -145,10 +145,20 @@
             perPage: 3,
             autoHeight: true,
             gap: 15,
-            perMove: 1
+            perMove: 1,
+            cloneStatus: true,
+            slideFocus: true,
+            easing: 'ease',
+            speed: 800,
+            classes: {
+              arrows: 'splide__arrows',
+              arrow : 'splide__arrow',
+              prev  : 'splide__arrow--prev',
+              next  : 'splide__arrow--next'
+            }
         });
         splide.mount();
-    }, 100)
+    }, 5000)
 </script>
 </body>
 </html>
