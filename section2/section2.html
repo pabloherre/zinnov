@@ -7,7 +7,7 @@
       <div class="section2-card section2-card-1">
         <div class="section2-card-blue">
           <p class="section2-card-title">REPORT</p>
-          <p class="section2-card-subtitle">COE HOTSPOTS OF THE WORLS</p>
+          <p class="section2-card-subtitle">COE HOTSPOTS OF THE WORLD</p>
           <p class="section2-card-extra">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est accusantium, perspiciatis
             quasi aspernatur odio quam ut, voluptatem modi repellendus voluptate vero maiores ipsum. Aspernatur officiis aliquam
             consectetur odio quibusdam esse facilis debitis qui, architecto accusantium.</p>
@@ -98,7 +98,7 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 20px;
-    letter-spacing: 0.04em;
+    letter-spacing: 4%;
   }
 
   .section2-card-extra {
@@ -129,17 +129,34 @@
 
   @media only screen and (max-width: 600px) {
     #section2-container {
-      padding: 10px
+      padding: 30px
+    }
+
+    .section2-title {
+      font-size: 1.285rem;
     }
 
     .section2-card-container {
       display: block;
       margin-top: 0;
     }
+
     .section2-card {
       width: auto;
       margin-bottom: 15px;
       margin-right: 0;
+    }
+
+    .section2-card-subtitle {
+      font-size: 1.142rem;
+    }
+
+    .section2-card-extra {
+      display: none;
+    }
+
+    .section2-card-blue:hover {
+      height: 77px;
     }
   }
 </style>
