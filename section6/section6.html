@@ -6,7 +6,7 @@
         <p>Towards a circular economy</p>
       </div>
       <div class="section6-card-content">
-        <div class="flex align-center">
+        <a href="#" class="section6-card-text-container flex align-center">
           <p class="section6-subtitle">2021 SUSTAINABILITY REPORT</p>
           &nbsp;&nbsp;&nbsp;
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,9 +15,9 @@
                 fill="white"/>
             <circle cx="11" cy="11" r="10.2143" stroke="white" stroke-width="1.57143"/>
           </svg>
-        </div>
+        </a>
 
-        <div class="flex align-center">
+        <a href="#" class="section6-card-text-container flex align-center">
           <p class="section6-subtitle">SUSTAINABLE INITIATIVES</p>
           &nbsp;&nbsp;&nbsp;
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,9 +26,9 @@
                 fill="white"/>
             <circle cx="11" cy="11" r="10.2143" stroke="white" stroke-width="1.57143"/>
           </svg>
-        </div>
+        </a>
 
-        <div class="flex align-center">
+        <a href="#" class="section6-card-text-container flex align-center">
           <p class="section6-subtitle">INTEL + ZINNOV SUSTAINABILITY CONCLAVE</p>
           &nbsp;&nbsp;&nbsp;
           <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,11 +37,11 @@
                 fill="white"/>
             <circle cx="11" cy="11" r="10.2143" stroke="white" stroke-width="1.57143"/>
           </svg>
-        </div>
+        </a>
       </div>
     </div>
     <div class="section6-card2">
-      <div style="padding-left: 5%">
+      <div class="section6-card2-container">
         <p class="section6-title">OUR <br/>
           PROMISE</p>
       </div>
@@ -56,29 +56,38 @@
     color: #FFFFFF;
   }
 
+  .section6-card-text-container {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  .section6-card2-container {
+    padding-left: 31px;
+    padding-top: 68px;
+  }
+
   .section6-content {
     display: flex;
   }
 
   .section6-card1 {
-    flex: 4;
-    height: 400px;
+    width: 784px;
+    height: 430px;
     background-color: #00696A;
     background-size: cover;
     margin-right: 15px;
     border-radius: 0px 22px 22px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
   }
 
   .section6-card-content {
-    padding-left: 20%
+    margin-top: 76px;
+    padding-left: 100px
   }
 
   .section6-card2 {
-    flex: 3;
-    height: 400px;
+    width: calc(100% - 784px - 15px);
+    height: 430px;
+    flex: 1;
     background: url("./assets/section6/image1.png") no-repeat center;
     background-size: cover;
     border-radius: 22px 0px 0px 22px;
@@ -88,6 +97,8 @@
     font-weight: 700;
     font-size: 2.7rem;
     line-height: 38px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .section6-subtitle {
@@ -100,14 +111,17 @@
     .section6-content {
       display: block;
     }
-    .section6-card1{
+
+    .section6-card1 {
       margin-left: 15px;
       border-radius: 22px;
     }
-    .section6-card2{
+
+    .section6-card2 {
       margin: 0 15px;
       border-radius: 22px;
     }
+
     .section6-card-content {
       padding-left: 10%;
     }

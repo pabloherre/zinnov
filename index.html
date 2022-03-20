@@ -88,13 +88,13 @@
         for (var i = 0; i < links.length; i++) {
             links[i].className = ''
         }
-        document.getElementsByName("sub-menu").forEach(el => el.style.display = 'none');
+        document.getElementsByName("sub-menu").forEach(el => el.style.transform = "scaleY(0)");
     }
 
     function showMenu(el, menu) {
         hideMenus();
         el.className = "active";
-        document.getElementById(menu).style.display = 'block';
+        document.getElementById(menu).style.transform = "scaleY(1)";
     }
 
     function hideSubMenus() {
