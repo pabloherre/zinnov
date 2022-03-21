@@ -1,0 +1,245 @@
+<div id="section4-container">
+  <div class="section4-content">
+    <div class="splide">
+      <div class="splide__arrows">
+        <div class="splide__arrow splide__arrow--prev">
+          <img src="./assets/icons/right-arrow-circle.svg" />
+        </div>
+        
+        <div class="splide__arrow splide__arrow--next">
+          <img src="./assets/icons/right-arrow-circle.svg" />
+        </div>
+      </div>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="section4-slide-1 splide-slide-img"></div>
+            <div class="splide-slide-text">
+              <p class="section4-card-title">REPORT</p>
+              <p class="section4-card-subtitle">INVESTMENT AND VALUE CREATION IN THE NEW DIGITAL NORMAL</p>
+              <p class="section4-card-subtitle2">The pandemia has accelerated digital transformation in organizations globally,
+                and will continue to dictate how they function in the future too.</p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="section4-slide-2 splide-slide-img"></div>
+            <div class="splide-slide-text">
+              <p class="section4-card-title">REPORT</p>
+              <p class="section4-card-subtitle">INVESTMENT AND VALUE CREATION IN THE NEW DIGITAL NORMAL</p>
+              <p class="section4-card-subtitle2">The pandemia has accelerated digital transformation in organizations globally,
+                and will continue to dictate how they function in the future too.</p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="section4-slide-3 splide-slide-img"></div>
+            <div class="splide-slide-text">
+              <p class="section4-card-title">REPORT</p>
+              <p class="section4-card-subtitle">INVESTMENT AND VALUE CREATION IN THE NEW DIGITAL NORMAL</p>
+              <p class="section4-card-subtitle2">The pandemia has accelerated digital transformation in organizations globally,
+                and will continue to dictate how they function in the future too.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex-column align-center justify-center" style="margin-top: 24px">
+      <a href="#" class="section4-learn-more flex align-center">
+        <span class="section4-card-link section4-card-subtitle-learn-more" style="width: auto">SEE ALL INSIGHTS</span>
+        &nbsp;&nbsp;&nbsp;
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+              d="M16.8052 11.519C17.0918 11.2324 17.0918 10.7676 16.8052 10.481L12.1338 5.80964C11.8472 5.52298 11.3824 5.52298 11.0958 5.80964C10.8091 6.09629 10.8091 6.56105 11.0958 6.84771L15.2481 11L11.0958 15.1523C10.8091 15.4389 10.8091 15.9037 11.0958 16.1904C11.3824 16.477 11.8472 16.477 12.1338 16.1904L16.8052 11.519ZM6 11.734L16.2861 11.734V10.266L6 10.266V11.734Z"
+              fill="#747474"/>
+          <circle cx="11" cy="11" r="10.2143" stroke="#747474" stroke-width="1.57143"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  .splide__arrows {
+    position: absolute;
+    top: 101px;
+    width: 100%;
+  }
+
+  .splide__arrow {
+    background: transparent;
+  }
+
+  .splide__arrow img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .splide__arrow--prev {
+    transform: scaleX(-1);
+    left: 28%;
+  }
+  .splide__arrow--next {
+    right: 28%;
+  }
+  .section4-content {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+
+  .section4-learn-more {
+    align-self: flex-end;
+    margin-right: 100px;
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+  .splide__slide {
+    height: 450px;
+  }
+  
+  .is-active.is-visible .splide-slide-img {
+    border-radius: 0 22px 22px 0;
+  }
+  
+  .is-visible .splide-slide-img {
+    border-radius: 22px 0 0 22px;
+  }
+  
+  .is-next .splide-slide-img {
+    border-radius: 22px;
+  }
+  
+  .splide-slide-text {
+    padding: 28px 50px 0;
+    text-align: center;
+  }
+  
+  .splide__slide .splide-slide-text {
+    transition: all 200ms ease 0s;
+    transform-origin: top center;
+    transform: scaleY(0);
+  }
+  
+  .is-next .splide-slide-text {
+    transform: scaleY(1);
+  }
+
+  .section4-slide-1 {
+    height: 255px;
+    width: auto;
+    background: url("./assets/section4/image1.png") no-repeat center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .section4-slide-2 {
+    height: 255px;
+    width: auto;
+    background: url("./assets/section4/image2.png") no-repeat center;
+    background-size: cover;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .section4-slide-3 {
+    height: 255px;
+    width: auto;
+    background: url("./assets/section4/image3.png") no-repeat center;
+    background-size: cover;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .section4-card-title {
+    font-weight: 500;
+    font-size: 0.85rem;
+    line-height: 12px;
+    letter-spacing: 0.04em;
+    margin: auto auto 18px;
+  }
+
+  .section4-card-subtitle {
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #747474;
+    width: 100%;
+    margin: auto auto 14px;
+  }
+
+  .section4-card-subtitle2 {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    width: 100%;
+    margin: auto;
+    color: #747474;
+  }
+  
+  .section4-card-link {
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #747474;
+    width: 100%;
+    margin: auto;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .splide__arrows {
+      display: none;
+    }
+
+    .splide__slide .splide-slide-text {
+      transform: none;
+    }
+
+    .splide-slide-img {
+      border-radius: 22px !important;
+    }
+
+    .splide-slide-text {
+      padding: 0;
+      margin-top: -30px;
+    }
+
+    .section4-card-subtitle {
+      font-size: .785rem;
+      width: auto;
+      padding: 14px 30px 0;
+    }
+
+    .section4-card-subtitle-learn-more {
+      font-size: 1rem;
+      float: right;  
+    }
+
+    .section4-learn-more {
+      margin-top: 45px;
+      margin-right: 30px;
+    }
+
+    .section4-card-title {
+      font-size: .714rem;
+      padding: 0px 30px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    
+    .section4-card-subtitle2 {
+      width: auto;
+      font-size: 1rem;
+      line-height: 20px;
+      padding: 0px 30px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+</style>
