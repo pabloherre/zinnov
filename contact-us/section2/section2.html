@@ -1,0 +1,176 @@
+<div id="contact-us-section2-container">
+  <div class="contact-us-section2-content">
+    <div class="contact-us-section2-contact-form">
+      <input type="email" placeholder="Email" class="contact-us-section2-contact-form-input" />
+      <input type="text" placeholder="Company" class="contact-us-section2-contact-form-input" />
+      <input type="text" placeholder="Designation" class="contact-us-section2-contact-form-input" />
+      <input type="text" placeholder="Email ID" class="contact-us-section2-contact-form-input" />
+      <input type="text" placeholder="Subject" class="contact-us-section2-contact-form-input" />
+      <textarea rows="4" placeholder="Message" class="contact-us-section2-contact-form-text-area"></textarea>
+      <input type="checkbox" class="contact-us-section2-contact-form-checkbox" />
+      <button class="contact-us-section2-contact-form-submit">SUBMIT</button>
+    </div>
+    <div class="contact-us-section2-contact-cards">
+      <div class="contact-us-section2-contact-cards-card">
+        <div class="contact-us-section2-contact-cards-card-info">
+          <div class="contact-us-section2-contact-cards-card-info-area">
+            Consulting & Platform Services
+          </div>
+          <div class="contact-us-section2-contact-cards-card-info-contact">
+            Nitika Goel
+          </div>
+          <div class="contact-us-section2-contact-cards-card-info-position">
+            Chief Marketing Officer
+          </div>
+        </div>
+        <div class="contact-us-section2-contact-cards-card-envelope"></div>
+      </div>
+      <div class="contact-us-section2-contact-cards-card">
+        <div class="contact-us-section2-contact-cards-card-info">
+          <div class="contact-us-section2-contact-cards-card-info-area">
+            MARKETING
+          </div>
+          <div class="contact-us-section2-contact-cards-card-info-contact">
+            Nitika Goel
+          </div>
+          <div class="contact-us-section2-contact-cards-card-info-position">
+            Chief Marketing Officer
+          </div>
+        </div>
+        <div class="contact-us-section2-contact-cards-card-envelope"></div>
+      </div>
+      <div class="contact-us-section2-contact-cards-card">
+        <div class="contact-us-section2-contact-cards-card-info">
+          <div class="contact-us-section2-contact-cards-card-info-area">
+            CAREERS
+          </div>
+          <div class="contact-us-section2-contact-cards-card-info-contact">
+            Shweta Ran
+          </div>
+          <div class="contact-us-section2-contact-cards-card-info-position">
+            Chief People Officer
+          </div>
+        </div>
+        <div class="contact-us-section2-contact-cards-card-envelope"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  #contact-us-section2-container {
+    color: white;
+  }
+
+  .contact-us-section2-content {
+    padding: 77px 100px 0 100px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .contact-us-section2-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 650px;
+    height: 550px;
+    padding: 42px;
+    background-color: #0F7BAB;
+    border-radius: 22px;
+  }
+
+  .contact-us-section2-contact-cards {
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-us-section2-contact-cards-card {
+    background-color: #5E8997;
+    border-radius: 22px;
+
+  }
+
+  .contact-us-section2-contact-cards-card-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.285rem;
+  }
+
+  .contact-us-section2-contact-cards-card-info-area {
+    font-weight: 700;
+  }
+
+  .contact-us-section2-contact-cards-card-info-contact {
+    font-weight: 700;
+  }
+
+  .contact-us-section2-contact-cards-card-info-position {
+    font-weight: 400;
+  }
+
+  .contact-us-section2-contact-cards-card-envelope {
+    align-self: flex-end;
+  }
+
+  .contact-us-section2-contact-form-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff80;
+    width: 471px;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+  }
+
+  .contact-us-section2-contact-form-text-area {
+    border-radius: 18px;
+    line-height: 20px;
+    padding: 20px 15px;
+  }
+
+  .contact-us-section2-contact-form-text-area:placeholder-shown {
+    color: #AEAEAE;
+  }
+
+  .contact-us-section2-contact-form-checkbox {
+    display: grid;
+    place-content: center;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    border-radius: 4px;
+    background-color: #0F7BAB;
+    border: white 1px solid;
+    height: 17px;
+    width: 17px;
+
+  }
+
+  .contact-us-section2-contact-form-checkbox::before {
+    /* ...existing styles */
+    content: "";
+    height: 17px;
+    width: 17px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    /* box-shadow: inset 1em 1em #0F7BAB; */
+    color: black;
+    transform-origin: bottom left;
+    clip-path: polygon(4.250 6.433, 1.818 4.000, 0.989 4.823, 4.250 8.083, 11.250 1.083, 10.428 0.261, 4.250 6.433)
+  }
+
+  .contact-us-section2-contact-form-checkbox:checked::before {
+    transform: scale(1);
+  }
+
+  .contact-us-section2-contact-form-input:focus-visible {
+    outline: none;
+  }
+
+  .contact-us-section2-contact-form-input::placeholder {
+    color: white;
+  }
+</style>
