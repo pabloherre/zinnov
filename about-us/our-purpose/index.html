@@ -7,7 +7,7 @@
   <meta name="msapplication-TileImage" content="https://zinnov.com/wp-content/themes/zinnov/images/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="referrer" content="no-referrer-when-downgrade" />
-  <link rel="manifest" href="../manifest.json" />
+  <link rel="manifest" href="../../manifest.json" />
   <title>
     Global Management Consulting | Business Advisory Services | Zinnov
   </title>
@@ -195,80 +195,17 @@
 
 <body>
 	<div style="overflow: hidden">
-		<div w3-include-html="../navbar/navbar.html"></div>
+		<div w3-include-html="../../navbar/navbar.html"></div>
 		<div w3-include-html="section1/section1.html"></div>
 		<div w3-include-html="section2/section2.html"></div>
 		<div w3-include-html="section3/section3.html"></div>
 		<div w3-include-html="section4/section4.html"></div>
 		<div w3-include-html="section5/section5.html"></div>
-		<div w3-include-html="../footer/footer.html"></div>
+    <div w3-include-html="section6/section6.html"></div>
+		<div w3-include-html="../../footer/footer.html"></div>
 	</div>
 	<script>
 		includeHTML();
-	</script>
-	<script>
-		setTimeout(() => {
-			//https://splidejs.com/guides/options/
-			var splide = new Splide(".careerssplide", {
-				type: "loop",
-				perPage: 1,
-				autoHeight: true,
-				gap: 0,
-				perMove: 1,
-				cloneStatus: true,
-				slideFocus: true,
-				pagination: false,
-				easing: "ease",
-				speed: 800,
-				classes: {
-					arrows: "splide__arrows",
-					arrow: "splide__arrow",
-					prev: "splide__arrow--prev",
-					next: "splide__arrow--next",
-				},
-				breakpoints: {
-					600: {
-						perPage: 1,
-						gap: 5,
-						padding: "10%",
-						start: 1,
-					},
-				},
-			});
-			splide.mount();
-		}, 5000);
-	</script>
-	<script>
-		setTimeout(() => {
-			//https://splidejs.com/guides/options/
-			var splide = new Splide(".careers-section4-splide", {
-				type: "loop",
-				perPage: 1,
-				autoHeight: true,
-				gap: 0,
-				perMove: 1,
-				cloneStatus: true,
-				slideFocus: true,
-				pagination: false,
-				easing: "ease",
-				speed: 800,
-				classes: {
-					arrows: "splide__arrows",
-					arrow: "splide__arrow",
-					prev: "splide__arrow--prev",
-					next: "splide__arrow--next",
-				},
-				breakpoints: {
-					600: {
-						perPage: 1,
-						gap: 5,
-						padding: "10%",
-						start: 1,
-					},
-				},
-			});
-			splide.mount();
-		}, 5000);
 	</script>
 </body>
 
