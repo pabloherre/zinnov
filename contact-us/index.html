@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="application-name" content="zinnov" />
+    <meta name="msapplication-TileImage" content="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <title>Global Management Consulting | Business Advisory Services | Zinnov</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="shortcut icon" href="https.://zinnov.com/wp-content/themes/zinnov/images/favicon.ico"
+        type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+</head>
+<style>
+    html {
+        font-size: 14px;
+        font-family: "Montserrat";
+    }
+
+    body {
+        margin: 0;
+    }
+
+    .flex {
+        display: flex
+    }
+
+    .flex-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .align-center {
+        align-items: center;
+    }
+
+    .justify-center {
+        justify-content: center;
+    }
+
+    .justify-right {
+        justify-content: right;
+    }
+
+    .justify-between {
+        justify-content: space-between;
+    }
+
+    .hide-desktop {
+        display: none;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+        }
+
+        .hide-mobile {
+            display: none;
+        }
+
+        .hide-desktop {
+            display: block;
+        }
+
+    }
+</style>
+<script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                /*make an HTTP request using the attribute value as the file name:*/
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            elmnt.innerHTML = "Page not found.";
+                        }
+                        /*remove the attribute, and call this function once more:*/
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                /*exit the function:*/
+                return;
+            }
+        }
+    };
+</script>
+<script type="text/javascript">
+    function hideMenus() {
+        const links = document.getElementById("nav").children;
+        for (var i = 0; i < links.length; i++) {
+            links[i].className = ''
+        }
+        document.getElementsByName("sub-menu").forEach(el => el.style.transform = "scaleY(0)");
+    }
+
+    function showMenu(el, menu) {
+        hideMenus();
+        el.className = "active";
+        document.getElementById(menu).style.transform = "scaleY(1)";
+    }
+
+    function hideSubMenus(menu) {
+        const links = document.getElementById("sub-nav").children;
+        for (var i = 0; i < links.length; i++) {
+            links[i].className = ''
+        }
+        document.getElementsByName("sub-menu-sand").forEach(el => {
+            el.style.transform = "scaleY(0)";
+            el.style.height = 'auto';
+        });
+    }
+
+    function showSubMenu(el, menu) {
+        el.className = "active-arrow";
+        document.getElementsByName(menu).forEach(el => {
+            el.style.transform = "scaleY(1)";
+            el.style.height = 'auto';
+        });
+    }
+
+    function hideSubMenu(el, menu) {
+        setTimeout(() => {
+            el.className = "";
+            document.getElementsByName(menu).forEach(el => {
+                el.style.transform = "scaleY(0)";
+                el.style.height = 0;
+            });
+        }, 100)
+
+    }
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+
+<body>
+    <div style="overflow: hidden">
+        <div w3-include-html="../navbar/navbar.html"></div>
+        <div w3-include-html="section1/section1.html"></div>
+        <div w3-include-html="section2/section2.html"></div>
+        <div w3-include-html="section3/section3.html"></div>
+        <div w3-include-html="section4/section4.html"></div>
+        <div w3-include-html="../footer/footer.html"></div>
+    </div>
+    <script>
+        includeHTML();
+    </script>
+</body>
+
+</html>
