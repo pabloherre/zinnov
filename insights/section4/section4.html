@@ -2,7 +2,16 @@
   <div class="insights-section4-grid-container">
     <div class="insights-section4-grid-item-container">
       <div class="insights-section4-grid-1">
-        
+        <div class="insights-section4-bottom-play">
+          <div class="section4-card-text-container insights-section4-grid-1-background">
+            <p class="section4-card-info">ZINNOV KEYNOTE</p>
+            <p class="section4-card-title">
+              202X & Future Growth Possibilities - 
+              Navigate at Speed to the New Reality
+            </p>
+            <p class="section4-card-subtitle">Pari Natarajan</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="insights-section4-grid-item-container">
@@ -160,6 +169,7 @@
     display: grid;
     grid-template-rows: 32vw 32vw;
   }
+
   .insights-section4-grid-item-container {
     display: flex;
   }
@@ -172,6 +182,7 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
   .insights-section4-subtitle {
     color: #FFFFFF;
     font-style: normal;
@@ -180,6 +191,7 @@
     line-height: 1.428rem;
     letter-spacing: 0.04em;
   }
+
   .insights-section4-text-link {
     color: #FFFFFF;
     font-style: normal;
@@ -204,7 +216,57 @@
     background-size: cover;
     width: 100%;
     background-position: center;
+    display: flex;
   }
+
+  .insights-section4-bottom-play {
+    background-image: url('../assets/insights/bottonPlayBlue.png');
+    background-repeat: no-repeat;
+    background-size: 6vw 6vw;
+    width: 100%;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .insights-section4-grid-1-background{
+    background-color: #0000008c;
+    width: 100%;
+    padding-bottom: 25px;
+    padding-left: 100px;
+  }
+
+  .section4-card-info {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.785rem;
+    line-height: 1.428rem;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+    margin-top: 30px;
+    margin-bottom: 12px;
+  }
+
+  .section4-card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.28rem;
+    line-height: 0.857rem;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+  }
+
+  .section4-card-subtitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.428rem;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+  }
+
   .insights-section4-grid-2 {
     background-image: url('../assets/insights/anyBlour.jpg');
     background-repeat: no-repeat;
@@ -216,6 +278,7 @@
     justify-content: space-between;
     padding: 79px 43px 35px 100px;
   }
+
   .insights-section4-grid-3 {
     background-image: url('../assets/insights/treeRiver.jpg');
     background-repeat: no-repeat;
@@ -225,16 +288,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 79px 95px 35px 43px;
+    padding: 79px 95px 35px 100px;
   }
+
   .insights-section4-grid-4 {
     background: #183757;
     width: 100%;
-    padding: 38px 43px 38px 95px;
+    padding: 38px 95px 38px 100px;
   }
 
   .insights-section4-list {
     border-top: 1px solid rgba(255, 255, 255, 0.4);
+    padding-top: 13px;
   }
 
   .insights-section4-list:first-child {
@@ -252,19 +317,17 @@
   .insights-section4-list-title p {
     margin: 0;
   }
-  .insights-section4-list-content{
-    padding-right: 43px;
-  }
+
   .insights-section4-list-text-container {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
-    color: #FFFFFF
+    color: #FFFFFF;
+    margin: 10px 0 15px;
+    padding-right: 43px;
   }
-  .insights-section4-list-text-link {
-    
-  }
+
   @media only screen and (max-width: 600px) {
     .insights-section4-container {
       padding: 20px;
