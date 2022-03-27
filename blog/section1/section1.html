@@ -20,95 +20,124 @@
         </svg>
       </a>
     </div>
+  
+    <div class="blog-section1-social-icons">
+      <div class="blog-section1-social-icons-spacer"></div>
+      <a href="https://www.linkedin.com/company/zinnov" target="_blank">
+        <img src="../assets/icons/linkedin.svg" alt="LinkedIn"/>
+      </a>
+      <a href="https://www.facebook.com/ZinnovManagementConsulting" target="_blank">
+        <img src="../assets/icons/facebook.svg" alt="Facebook"/>
+      </a>
+      <a href="https://twitter.com/zinnov" target="_blank">
+        <img src="../assets/icons/twitter.svg" alt="Twitter"/>
+      </a>
+      <a href="https://www.youtube.com/c/ZinnovManagementConsulting"target="_blank">
+        <img src="../assets/icons/youtube.svg" alt="Youtube"/>
+      </a>
+    </div>
   </div>
+</div>
 
-  <style type="text/css">
+<style type="text/css">
+  #blog-section1-container {
+    height: 690px;
+    width: 100%;
+    background-image: url("../assets/blog/PORTADA.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+
+  .blog-section1-content {
+    margin-top: auto;
+    height: 100%;
+    align-items: flex-end;
+  }
+
+  .blog-section1-info {
+    width: 80%;
+    padding-left: 100px;
+  }
+
+  .blog-section1-title {
+    width: 575px;
+    font-weight: 700;
+    font-size: 2.71rem;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 37px;
+  }
+
+  .blog-section1-date {
+    font-weight: 400;
+    font-size: 1.285rem;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+
+  .blog-section1-learn-more {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.143rem;
+    margin-bottom: 83px;
+    margin-top: 49px;
+  }
+
+  .blog-section1-learn-more p {
+    font-weight: 700;
+    font-size: 1.14rem;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .blog-section1-social-icons {
+    padding-right: 95px;
+    padding-bottom: 120px;
+    display: flex;
+    width: 20%;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+  }
+
+  .blog-section1-social-icons-spacer {
+    flex-grow: 1;
+  }
+  
+  @media only screen and (max-width: 600px) {
     #blog-section1-container {
-      height: 690px;
-      width: 100%;
-      background-image: url("../assets/blog/PORTADA.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      color: #fff;
+      height: auto;
+    }
+
+    #blog-section1-container {
+      height: 560px;
+      background-size: auto;
     }
 
     .blog-section1-content {
-      margin-top: auto;
-      flex-direction: column;
-      height: 100%;
-      justify-content: flex-end;
-    }
-
-    .blog-section1-info {
-      width: 80%;
-      padding-left: 100px;
+      padding-top: 135px;
+      padding-left: 5vw;
+      padding-right: 5vw;
     }
 
     .blog-section1-title {
-      width: 575px;
-      font-weight: 700;
+      max-width: none;
       font-size: 2.71rem;
-      line-height: 40px;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      margin-bottom: 37px;
+      line-height: 2.5rem;
     }
 
-    .blog-section1-date {
-      font-weight: 400;
-      font-size: 1.285rem;
-      line-height: 20px;
-      color: #FFFFFF;
+    .blog-section1-title {
+      max-width: none;
+      font-size: 1rem;
     }
 
-    .blog-section1-learn-more {
-      color: #FFFFFF;
-      text-decoration: none;
-      font-size: 1.143rem;
-      margin-bottom: 83px;
-      margin-top: 49px;
+    .blog-section1-info {
+      width: 100%;
     }
-
-    .blog-section1-learn-more p {
-      font-weight: 700;
-      font-size: 1.14rem;
-      line-height: 20px;
-      letter-spacing: 0.05em;
-    }
-
-
-    @media only screen and (max-width: 600px) {
-      #blog-section1-container {
-        height: auto;
-      }
-
-      #blog-section1-container {
-        height: 560px;
-        background-size: auto;
-      }
-
-      .blog-section1-content {
-        padding-top: 135px;
-        padding-left: 5vw;
-        padding-right: 5vw;
-      }
-
-      .blog-section1-title {
-        max-width: none;
-        font-size: 2.71rem;
-        line-height: 2.5rem;
-      }
-
-      .blog-section1-title {
-        max-width: none;
-        font-size: 1rem;
-      }
-
-      .blog-section1-info {
-        width: 100%;
-      }
-    }
-  </style>
-</div>
+  }
+</style>
