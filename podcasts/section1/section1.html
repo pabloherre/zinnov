@@ -1,0 +1,199 @@
+<div id="podcasts-section1-container">
+  <div class="podcasts-section1-content flex">
+    <div class="podcasts-section1-info">
+      <div class="podcasts-section1-title">
+        <span>THE ZINNOV PODCAST</span>
+      </div>
+      <div class="podcasts-section1-text">
+        Welcome to the Zinnov Podcasts, a business, technology, and leadership podcast
+        featuring conversations with leading thinkers, industry experts, and technology practitioners.
+      </div>
+      <div class="podcasts-section1-button-container flex">
+        <button class="podcasts-section1-button">RECOMMEND A TOPIC</button>
+        <button class="podcasts-section1-button">NOMINATE A SPEAKER</button>
+      </div>
+      <div class="podcasts-section1-search">
+        <input type="text" class="podcasts-input-search" placeholder="Search for Opportunities" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="podcasts-input-icon" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="podcasts-section1-social-icons">
+      <div class="podcasts-section1-social-icons-spacer"></div>
+      <a href="https://www.linkedin.com/company/zinnov" target="_blank">
+        <img src="../assets/icons/linkedin.svg" alt="LinkedIn" />
+      </a>
+      <a href="https://www.facebook.com/ZinnovManagementConsulting" target="_blank">
+        <img src="../assets/icons/facebook.svg" alt="Facebook" />
+      </a>
+      <a href="https://twitter.com/zinnov" target="_blank">
+        <img src="../assets/icons/twitter.svg" alt="Twitter" />
+      </a>
+      <a href="https://www.youtube.com/c/ZinnovManagementConsulting" target="_blank">
+        <img src="../assets/icons/youtube.svg" alt="Youtube" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  #podcasts-section1-container {
+    height: 690px;
+    width: 100%;
+    background-image: url("../assets/podcasts/HeroImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+  }
+
+  .podcasts-section1-search {
+    width: 618px;
+    margin-top: 45px;
+    margin-bottom: 60px;
+    display: flex;
+    display: flex;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 22px;
+    justify-content: space-between;
+  }
+
+  .podcasts-input-icon {
+    width: 21px;
+    height: 21px;
+    margin-right: 12px;
+    margin-top: 7px;
+  }
+
+  .podcasts-input-search {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 8px 26px 6px;
+    font-weight: 400;
+    font-size: 1.14rem;
+    color: #FFFFFF;
+    line-height: 20px;
+  }
+
+  .podcasts-input-search:focus-visible {
+    outline: none;
+  }
+
+  .podcasts-input-search::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .podcasts-section1-content {
+    margin-top: auto;
+    padding: 314px 0px 0px 0px;
+  }
+
+  .podcasts-section1-info {
+    width: 50%;
+    padding-left: 100px;
+  }
+
+  .podcasts-section1-title {
+    width: 575px;
+    font-weight: 700;
+    font-size: 2.71rem;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 37px;
+  }
+
+  .podcasts-section1-text {
+    font-weight: 400;
+    font-size: 1.285rem;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+
+  .podcasts-section1-learn-more {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.143rem;
+    margin-bottom: 83px;
+    margin-top: 49px;
+  }
+
+  .podcasts-section1-learn-more p {
+    font-weight: 700;
+    font-size: 1.14rem;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .podcasts-section1-social-icons {
+    padding-right: 95px;
+    padding-bottom: 100px;
+    display: flex;
+    width: 20%;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+  }
+
+  .podcasts-section1-social-icons-spacer {
+    flex-grow: 1;
+  }
+
+  .podcasts-section1-button {
+    cursor: pointer;
+    margin-top: 44px;
+    margin-right: 15px;
+    border-radius: 30px;
+    border: none;
+    background: #0F739E;
+    font-weight: 500;
+    font-size: 1.14rem;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 7px 25px 4px 25px;
+    height: 36px;
+    width: auto
+  }
+
+  @media only screen and (max-width: 600px) {
+    #podcasts-section1-container {
+      height: auto;
+    }
+
+    #podcasts-section1-container {
+      height: 560px;
+      background-size: auto;
+    }
+
+    .podcasts-section1-content {
+      padding-top: 135px;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+
+    .podcasts-section1-title {
+      max-width: none;
+      font-size: 2.71rem;
+      line-height: 2.5rem;
+    }
+
+    .podcasts-section1-title {
+      max-width: none;
+      font-size: 1rem;
+    }
+
+    .podcasts-section1-info {
+      width: 100%;
+    }
+  }
+</style>
