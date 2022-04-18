@@ -1,7 +1,7 @@
 <div id="podcasts-section4-container">
   <div class="podcasts-section4-content">
     <div class="podcasts-section4-title">Zinnov Podcasts Series</div>
-    <div class="podcasts-section4-card flex-column">
+    <div class="podcasts-section4-card podcasts-card1 flex-column">
       <div class="podcasts-section4-series flex">
         <span>SERIES | 27 EPISODES </span>
         <div>
@@ -18,7 +18,7 @@
         and thought leaders from across the globe as they discuss their insights on overcoming challenges and the
         mindset that helped them navigate the journey of crisis resilience and growth.</p>
     </div>
-    <div class="podcasts-section4-card card2 flex-column">
+    <div class="podcasts-section4-card podcasts-card2 flex-column">
       <div class="podcasts-section4-series flex">
         <span>SERIES | 14 EPISODES </span>
         <div>
@@ -35,7 +35,7 @@
         does the future hold? Tune in to the Zinnov Podcast - Hyper Intelligent Automation series to know how HIA has
         evolved from a conventional Automation tool to a strategic enterprise game-changer.</p>
     </div>
-    <div class="podcasts-section4-card card3 flex-column">
+    <div class="podcasts-section4-card podcasts-card3 flex-column">
       <div class="podcasts-section4-series flex">
         <span>SERIES | 1 EPISODE </span>
         <div>
@@ -71,22 +71,30 @@
     color: #696969;
   }
 
-  .card2 {
-    background: #E03838 !important;
+  .podcasts-card1 {
+    background-image: url("../assets/podcasts/image1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
-  .card3 {
-    background: #52504E !important;
+  .podcasts-card2 {
+    background-image: url("../assets/podcasts/image2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .podcasts-card3 {
+    background-image: url("../assets/podcasts/image3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .podcasts-section4-card {
-    background: #2798B0;
     margin-bottom: 13px;
     padding: 27px 587px 100px 100px
-      /* background-image: url("../assets/podcasts/serie1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
   }
 
   .podcasts-section4-card p {
@@ -96,6 +104,7 @@
     line-height: 22px;
     color: #FFFFFF;
     margin-top: 30px;
+    width: 60%;
   }
 
   .podcasts-section4-series {
